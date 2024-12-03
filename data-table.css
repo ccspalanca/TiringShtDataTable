@@ -1,0 +1,122 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('shrine.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    color: #fff;
+}
+
+/* Center the data table container */
+.data-table-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%; /* Wider layout */
+    max-width: 1000px; /* Prevent it from growing too large */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Data table header styling */
+.data-table-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffdd57; /* A soft yellow/gold color */
+}
+
+/* Form Styling */
+.form-container {
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-container form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+.form-container form input,
+.form-container form select,
+.form-container form button {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+/* Table Styling */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    color: #fff;
+}
+
+table th {
+    background-color: #444;
+}
+
+table tr:nth-child(even) {
+    background-color: #333;
+}
+
+/* Search and Filter Inputs Styling */
+#search {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#courseFilter, .form-container input[type="radio"], .form-container select {
+    padding: 8px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffdd57; /* Yellow/gold */
+    color: #000;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button[type="reset"] {
+    background-color: #f44336;
+}
+
+button:hover {
+    background-color: #ffc107; /* Slightly darker yellow */
+}

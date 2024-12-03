@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table</title>
+    <link rel="stylesheet" href="data-table.css">
+</head>
+<body>
+
+    <div class="data-table-container">
+        <div class="form-container">
+            <h2>Add Student</h2>
+            <form id="student-form">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required>
+
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required>
+
+                <label>Gender:</label>
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+
+                <label for="course">Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">Select Course</option>
+                    <option value="BS-CS">BS-CS</option>
+                    <option value="BS-DS">BS-DS</option>
+                    <option value="BS-IS">BS-IS</option>
+                    <option value="BS-IT">BS-IT</option>
+                </select>
+
+                <button type="submit">Add</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+
+        <div class="table-container">
+            <h2>Student Data</h2>
+            <input type="text" id="search" placeholder="Search by Firstname or Lastname" onkeyup="filterTable()">
+            <div>
+                <label>Gender:</label>
+                <label><input type="radio" name="genderFilter" value="" checked onclick="filterTable()"> All</label>
+                <label><input type="radio" name="genderFilter" value="Male" onclick="filterTable()"> Male</label>
+                <label><input type="radio" name="genderFilter" value="Female" onclick="filterTable()"> Female</label>
+            </div>
+            <div>
+                <label for="courseFilter">Course:</label>
+                <select id="courseFilter" onchange="filterTable()">
+                    <option value="">All Courses</option>
+                    <option value="BS-CS">BS-CS</option>
+                    <option value="BS-DS">BS-DS</option>
+                    <option value="BS-IS">BS-IS</option>
+                    <option value="BS-IT">BS-IT</option>
+                </select>
+            </div>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Gender</th>
+                        <th>Course</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be added dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="data-table.js"></script>
+</body>
+</html>
